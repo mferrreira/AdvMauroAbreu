@@ -1,6 +1,6 @@
-# Landing Page - Advogado Criminal
+# Landing Page - Advogado Mauro Abreu
 
-Uma landing page profissional e responsiva para advogados criminais, desenvolvida com React, Tailwind CSS e shadcn/ui.
+Landing page profissional e responsiva, desenvolvida com React, Tailwind CSS e shadcn/ui.
 
 ## 🚀 Características
 
@@ -67,12 +67,6 @@ Uma landing page profissional e responsiva para advogados criminais, desenvolvid
 
 ## 🎨 Personalização
 
-### Conteúdo
-- Edite o arquivo `src/App.jsx` para alterar textos, informações de contato e conteúdo
-- Substitua "Dr. Alexandre Silva" pelo nome real do advogado
-- Atualize telefones, e-mails e endereços
-- Modifique as áreas de atuação conforme necessário
-
 ### Cores e Estilo
 - As cores principais estão definidas no `src/App.css`
 - Use as classes do Tailwind CSS para ajustes rápidos
@@ -107,33 +101,10 @@ O formulário de contato inclui:
 - CSS e JavaScript minificados
 - Carregamento rápido
 
-## 🚀 Deploy
-
-### Opções de Hospedagem
-
-1. **Netlify**: Arraste a pasta `dist/` para netlify.com/drop
-2. **Vercel**: Conecte o repositório Git
-3. **GitHub Pages**: Configure nas configurações do repositório
-4. **Servidor próprio**: Faça upload da pasta `dist/` via FTP
-
-### Domínio Personalizado
-
-Após o deploy, configure um domínio personalizado como:
-- `www.alexandresilva.adv.br`
-- `www.advogadocriminal.com.br`
-
 ## 📞 Suporte
 
 Para dúvidas sobre personalização ou implementação, consulte:
 - Documentação do React: https://react.dev
 - Documentação do Tailwind: https://tailwindcss.com
 - Componentes shadcn/ui: https://ui.shadcn.com
-
-## 📄 Licença
-
-Este projeto foi desenvolvido especificamente para uso profissional de advogados criminais.
-
----
-
-**Desenvolvido com ❤️ para profissionais do direito criminal**
 

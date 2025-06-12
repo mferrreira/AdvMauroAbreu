@@ -134,7 +134,7 @@ function handleSubmit(e) {
               <div className="flex items-center space-x-4">
                 <Award className="h-12 w-12 text-blue-600" />
                 <div>
-                  <h4 className="font-semibold text-slate-900">OAB/SP 123.456</h4>
+                  <h4 className="font-semibold text-slate-900">OAB/MG 123.456</h4>
                   <p className="text-slate-600">Registro na Ordem dos Advogados do Brasil</p>
                 </div>
               </div>
@@ -317,7 +317,7 @@ function handleSubmit(e) {
                   <MapPin className="h-6 w-6 text-blue-400" />
                   <div>
                     <h4 className="font-semibold">Endereço</h4>
-                    <p className="text-slate-300">Av. Paulista, 1000 - Sala 1001<br />São Paulo - SP</p>
+                    <p className="text-slate-300">Av. Paulista, 1000 - Sala 1001<br />Itaúna - MG</p>
                   </div>
                 </div>
                 <div className="flex items-center space-x-4">
@@ -394,13 +394,13 @@ function handleSubmit(e) {
                 <p>(31) 9 9902-1212</p>
                 <p>contato@mauroabreu.adv.br</p>
                 <p>Av. Paulista, 1000 - Sala 1001</p>
-                <p>São Paulo - SP</p>
+                <p>Itaúna - MG</p>
               </div>
             </div>
           </div>
           <div className="border-t border-slate-800 mt-8 pt-8 text-center text-slate-400">
             <p>&copy; 2025 Dr. Mauro Abreu - Advogado Criminal. Todos os direitos reservados.</p>
-            <p className="mt-2">OAB/SP 123.456</p>
+            <p className="mt-2">OAB/MG 123.456</p>
           </div>
         </div>
       </footer>
