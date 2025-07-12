@@ -3,6 +3,18 @@
 
 @custom-variant dark (&:is(.dark *));
 
+/* Custom Font Configuration */
+@layer base {
+  html {
+    font-family: 'Source Serif Pro', serif;
+  }
+  
+  /* Default font for body text */
+  body {
+    font-family: 'Source Serif Pro', serif;
+  }
+}
+
 @theme inline {
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
@@ -116,6 +128,10 @@
   }
   body {
     @apply bg-background text-foreground;
+    overflow-x: hidden;
+  }
+  html {
+    overflow-x: hidden;
   }
 }
 
