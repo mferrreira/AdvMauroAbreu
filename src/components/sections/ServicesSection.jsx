@@ -43,31 +43,31 @@ const ServicesSection = ({ services, isDarkMode }) => {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 lg:gap-8">
           {services.map((service, index) => {
             const IconComponent = iconMap[service.icon];
             return (
-              <Card key={index} className={`group border rounded-3xl overflow-hidden hover:shadow-lg transition-all duration-300 ${
+              <Card key={index} className={`group border rounded-3xl overflow-hidden hover:shadow-lg transition-all duration-300 h-full ${
                 isDarkMode 
                   ? 'bg-gray-800/50 border-gray-700' 
                   : 'bg-white/80 border-gray-200 shadow-lg'
               }`}>
                 <CardHeader className="pb-4 md:pb-6">
-                  <div className={`p-4 md:p-6 rounded-2xl w-fit mb-6 md:mb-8 ${
+                  <div className={`p-3 md:p-4 lg:p-6 rounded-2xl w-fit mb-4 md:mb-6 lg:mb-8 ${
                     isDarkMode 
                       ? 'bg-gradient-to-br from-gray-700 to-gray-800' 
                       : 'bg-gradient-to-br from-gray-600 to-gray-700'
                   }`}>
                     <div className="text-white">
-                      <IconComponent className="h-8 md:h-10 w-8 md:w-10" />
+                      <IconComponent className="h-6 md:h-8 lg:h-10 w-6 md:w-8 lg:w-10" />
                     </div>
                   </div>
-                  <CardTitle className={`text-lg md:text-2xl font-black font-heading ${
+                  <CardTitle className={`text-base md:text-lg lg:text-2xl font-black font-heading leading-tight ${
                     isDarkMode ? 'text-white' : 'text-gray-900'
                   }`}>{service.title}</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <CardDescription className={`text-base md:text-lg leading-relaxed font-light font-body ${
+                  <CardDescription className={`text-sm md:text-base lg:text-lg leading-relaxed font-light font-body ${
                     isDarkMode ? 'text-gray-300' : 'text-gray-600'
                   }`}>
                     {service.description}

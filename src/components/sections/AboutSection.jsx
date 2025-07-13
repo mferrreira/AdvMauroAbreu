@@ -29,7 +29,7 @@ const AboutSection = ({ isDarkMode }) => (
             isDarkMode ? 'text-gray-300' : 'text-gray-600'
           }`}>
             Dr. Mauro Abreu é advogado criminal em Itaúna com mais de 15 anos de experiência. 
-            Formado pela Universidade de São Paulo (USP) e pós-graduado em Ciências Criminais, 
+            Formado pela Universidade de Itaúna e pós-graduado em Ciências Criminais, 
             dedica sua carreira à defesa criminal especializada na região de Itaúna e Centro-Oeste de Minas Gerais.
           </p>
           <p className={`text-lg md:text-xl mb-8 md:mb-12 leading-relaxed font-light font-body ${
@@ -59,16 +59,16 @@ const AboutSection = ({ isDarkMode }) => (
         <div className="order-first lg:order-last">
           {/* Professional Photo Card */}
           <div 
-            className={`rounded-3xl p-8 h-150 md:p-12 shadow-lg border text-center relative overflow-hidden ${
+            className={`rounded-3xl p-8 md:p-12 shadow-lg border text-center relative overflow-hidden bg-cover bg-no-repeat ${
               isDarkMode 
                 ? 'border-gray-600 text-white' 
                 : 'border-gray-200 text-gray-900'
             }`}
             style={{
               backgroundImage: `url('/about_photo.png')`,
-              backgroundSize: 'cover',
-              backgroundPosition: 'center',
-              backgroundRepeat: 'no-repeat'
+              backgroundPosition: 'center 15%',
+              minHeight: '500px',
+              height: '600px'
             }}
           >
             {/* Overlay for better text readability */}

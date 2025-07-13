@@ -20,7 +20,7 @@ import AboutSection from './components/sections/AboutSection.jsx';
 import ServicesSection from './components/sections/ServicesSection.jsx';
 import TestimonialsSection from './components/sections/TestimonialsSection.jsx';
 import ContactSection from './components/sections/ContactSection.jsx';
-import BlogSection from './components/sections/BlogSection.jsx';
+
 import Footer from './components/sections/Footer.jsx';
 
 function App() {
@@ -116,10 +116,6 @@ function App() {
           contactInfo={contactInfo}
           isDarkMode={isDarkMode}
           handleSubmit={handleSubmit}
-        />
-
-        <BlogSection 
-          isDarkMode={isDarkMode}
         />
       </main>
 

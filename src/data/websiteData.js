@@ -1,14 +1,14 @@
 // Carousel slides
 export const carouselSlides = [
   {
+    image: '/hero_photo_1.jpg',
+    title: 'Experiência e Confiança',
+    subtitle: 'Mais de 1000 defesas realizadas com sucesso. Sua liberdade e direitos em mãos experientes.'
+  },
+  {
     image: 'https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
     title: 'Advogado Criminal em Itaúna',
     subtitle: 'Dr. Mauro Abreu - Defesa criminal especializada em Itaúna/MG. Proteção dos seus direitos com estratégia, dedicação e resultados comprovados há mais de 15 anos.'
-  },
-  {
-    image: '/hero_photo_1.jpeg',
-    title: 'Experiência e Confiança',
-    subtitle: 'Mais de 500 casos defendidos com sucesso. Sua liberdade e direitos em mãos experientes.'
   },
   {
     image: 'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
@@ -99,10 +99,10 @@ export const contactInfo = [
 
 // Stats
 export const stats = [
-  { number: '500+', label: 'Casos Defendidos' },
+  { number: '1000+', label: 'Defesas' },
   { number: '15+', label: 'Anos de Experiência' },
   { number: '95%', label: 'Taxa de Sucesso' },
-  { number: '24h', label: 'Atendimento de Urgência' },
+  { number: '24h', label: 'Atendimento' },
 ];
 
 // Practice Areas (Footer)

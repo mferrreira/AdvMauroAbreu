@@ -30,7 +30,7 @@ const Footer = ({ practiceAreas, footerContacts, isDarkMode }) => (
           <p className={`leading-relaxed text-base md:text-xl font-light font-body ${
             isDarkMode ? 'text-gray-400' : 'text-gray-600'
           }`}>
-            Defendendo seus direitos com dedicação, estratégia e resultados comprovados há mais de 15 anos.
+            Defendendo seus direitos com dedicação, estratégia e resultados comprovados há mais de 15 anos. Mais de 1000 defesas realizadas.
           </p>
         </div>
         <div>

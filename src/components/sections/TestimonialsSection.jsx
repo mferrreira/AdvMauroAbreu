@@ -32,31 +32,31 @@ const TestimonialsSection = ({ testimonials, isDarkMode }) => (
         </p>
       </div>
       
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 lg:gap-8">
         {testimonials.map((testimonial, index) => (
-          <Card key={index} className={`shadow-lg rounded-3xl border ${
+          <Card key={index} className={`shadow-lg rounded-3xl border h-full ${
             isDarkMode 
               ? 'bg-gray-800/50 border-gray-700' 
               : 'bg-white/80 border-gray-200'
           }`}>
-            <CardContent className="p-6 md:p-10">
-              <div className="flex mb-6 md:mb-8">
+            <CardContent className="p-4 md:p-6 lg:p-10">
+              <div className="flex mb-4 md:mb-6 lg:mb-8">
                 {[...Array(testimonial.rating)].map((_, i) => (
-                  <Star key={i} className="h-6 md:h-7 w-6 md:w-7 text-yellow-500 fill-current" />
+                  <Star key={i} className="h-5 md:h-6 lg:h-7 w-5 md:w-6 lg:w-7 text-yellow-500 fill-current" />
                 ))}
               </div>
-              <p className={`mb-8 md:mb-10 italic leading-relaxed text-base md:text-xl font-light font-body ${
+              <p className={`mb-6 md:mb-8 lg:mb-10 italic leading-relaxed text-sm md:text-base lg:text-xl font-light font-body ${
                 isDarkMode ? 'text-gray-300' : 'text-gray-600'
               }`}>
                 "{testimonial.content}"
               </p>
-              <div className={`border-t pt-6 md:pt-8 ${
+              <div className={`border-t pt-4 md:pt-6 lg:pt-8 ${
                 isDarkMode ? 'border-gray-600' : 'border-gray-200'
               }`}>
-                <h4 className={`font-bold text-lg md:text-2xl font-heading ${
+                <h4 className={`font-bold text-base md:text-lg lg:text-2xl font-heading ${
                   isDarkMode ? 'text-white' : 'text-gray-900'
                 }`}>{testimonial.name}</h4>
-                <p className={`font-semibold text-base md:text-lg font-body ${
+                <p className={`font-semibold text-sm md:text-base lg:text-lg font-body ${
                   isDarkMode ? 'text-gray-400' : 'text-gray-500'
                 }`}>{testimonial.role}</p>
               </div>

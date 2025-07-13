@@ -118,10 +118,10 @@ const HeroCarousel = ({ slides, isDarkMode, scrollToSection }) => {
         >
           {/* Background Image */}
           <div 
-            className="absolute inset-0 bg-cover bg-no-repeat"
+            className={`absolute inset-0 bg-cover bg-no-repeat ${index === 0 ? 'md:bg-[left_center]' : ''}`}
             style={{ 
               backgroundImage: `url(${slide.image})`,
-              backgroundPosition: 'left center'
+              backgroundPosition: index === 0 ? (window.innerWidth >= 768 ? 'left center' : 'left 25%') : 'left center'
             }}
           />
           
@@ -139,150 +139,13 @@ const HeroCarousel = ({ slides, isDarkMode, scrollToSection }) => {
               : 'from-black/70 via-black/40 to-transparent'
           }`} />
           
-          {/* Mobile Layout - Special for slide 2 (index 1) */}
-          {index === 1 ? (
-            <div className="md:hidden relative h-full flex flex-col">
-              {/* Title at top */}
-              <div className="flex-1 flex flex-col justify-start pt-20">
-                <div className="w-full px-6">
-                  <div className="max-w-xs ml-auto">
-                    {/* Badge */}
-                    <div className={`inline-flex items-center space-x-3 px-6 py-3 rounded-full text-sm font-medium mb-8 mt-8 border backdrop-blur-sm ${
-                      isDarkMode 
-                        ? 'bg-white/10 text-white border-white/20' 
-                        : 'bg-white/20 text-gray-100 border-white/30'
-                    }`}>
-                      <Phone className={`h-5 w-5 ${
-                        isDarkMode ? 'text-white' : 'text-gray-100'
-                      }`} />
-                      <span>Defesa Criminal Especializada</span>
-                    </div>
-                    
-                    {/* Main Title */}
-                    <h1 className={`text-4xl font-black mb-6 leading-tight font-heading ${
-                      isDarkMode ? 'text-white' : 'text-white'
-                    }`}>
-                      {slide.title}
-                    </h1>
-                  </div>
-                </div>
-              </div>
-
-              {/* Description at bottom */}
-              <div className="flex-1 flex flex-col justify-end pb-8">
-                <div className="w-full px-6">
-                  <div className="max-w-xs ml-auto">
-                    {/* Subtitle */}
-                    <p className={`text-xl mb-8 leading-relaxed font-light font-body ${
-                      isDarkMode ? 'text-gray-200' : 'text-gray-100'
-                    }`}>
-                      {slide.subtitle}
-                    </p>
-                    
-                    {/* CTA Button */}
-                    <div className="flex flex-col gap-4">
-                      <Button
-                        size="lg"
-                        className={`text-lg px-8 py-6 rounded-2xl shadow-lg transition-all duration-300 font-bold transform hover:scale-105 ${
-                          isDarkMode 
-                            ? 'bg-white text-gray-900 hover:bg-gray-100' 
-                            : 'bg-white text-gray-900 hover:bg-gray-50'
-                        }`}
-                        onClick={() => scrollToSection('contact')}
-                      >
-                        <Phone className="mr-3 h-6 w-6" />
-                        Consulta Gratuita
-                        <ArrowRight className="ml-2 h-5 w-5" />
-                      </Button>
-                      
-                      <Button
-                        variant="outline"
-                        size="lg"
-                        className={`text-lg px-8 py-6 rounded-2xl backdrop-blur-sm transition-all duration-300 font-bold ${
-                          isDarkMode 
-                            ? 'border-white/30 bg-gray-600/40 text-white/90 hover:bg-gray-100/10' 
-                            : 'border-white/50 bg-gray-600/40 text-white/90 hover:bg-gray-100/20'
-                        }`}
-                        onClick={() => scrollToSection('about')}
-                      >
-                        Saiba Mais
-                      </Button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          ) : (
-            /* Mobile Layout - Standard right-side for other slides */
-            <div className="md:hidden relative h-full flex items-center justify-end pt-16">
-              <div className="w-full px-6">
-                <div className="max-w-xs ml-auto">
-                  {/* Badge */}
-                  <div className={`inline-flex items-center space-x-3 px-6 py-3 rounded-full text-sm font-medium mb-8 mt-8 border backdrop-blur-sm ${
-                    isDarkMode 
-                      ? 'bg-white/10 text-white border-white/20' 
-                      : 'bg-white/20 text-gray-100 border-white/30'
-                  }`}>
-                    <Phone className={`h-5 w-5 ${
-                      isDarkMode ? 'text-white' : 'text-gray-100'
-                    }`} />
-                    <span>Defesa Criminal Especializada</span>
-                  </div>
-                  
-                  {/* Main Title */}
-                  <h1 className={`text-4xl font-black mb-6 leading-tight font-heading ${
-                    isDarkMode ? 'text-white' : 'text-white'
-                  }`}>
-                    {slide.title}
-                  </h1>
-                  
-                  {/* Subtitle */}
-                  <p className={`text-xl mb-8 leading-relaxed font-light font-body ${
-                    isDarkMode ? 'text-gray-200' : 'text-gray-100'
-                  }`}>
-                    {slide.subtitle}
-                  </p>
-                  
-                  {/* CTA Button */}
-                  <div className="flex flex-col gap-4">
-                    <Button
-                      size="lg"
-                      className={`text-lg px-8 py-6 rounded-2xl shadow-lg transition-all duration-300 font-bold transform hover:scale-105 ${
-                        isDarkMode 
-                          ? 'bg-white text-gray-900 hover:bg-gray-100' 
-                          : 'bg-white text-gray-900 hover:bg-gray-50'
-                      }`}
-                      onClick={() => scrollToSection('contact')}
-                    >
-                      <Phone className="mr-3 h-6 w-6" />
-                      Consulta Gratuita
-                      <ArrowRight className="ml-2 h-5 w-5" />
-                    </Button>
-                    
-                    <Button
-                      variant="outline"
-                      size="lg"
-                      className={`text-lg px-8 py-6 rounded-2xl backdrop-blur-sm transition-all duration-300 font-bold ${
-                        isDarkMode 
-                          ? 'border-white/30 bg-gray-600/40 text-white/90 hover:bg-gray-100/10' 
-                          : 'border-white/50 bg-gray-600/40 text-white/90 hover:bg-gray-100/20'
-                      }`}
-                      onClick={() => scrollToSection('about')}
-                    >
-                      Saiba Mais
-                    </Button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          )}
-
-          {/* Desktop Layout */}
-          <div className="hidden md:block relative h-full flex items-center justify-end">
-            <div className="w-full px-8">
-              <div className="max-w-4xl ml-auto">
+          {/* Slide Text Block */}
+          {index === 0 ? (
+            // Right-aligned for first slide
+            <div className="absolute inset-0 flex items-center justify-end">
+              <div className="w-full max-w-xs sm:max-w-md md:max-w-2xl lg:max-w-4xl ml-auto px-6 md:px-8 lg:px-12 py-12 md:py-0" style={{marginLeft: 'min(30vw, 2rem)'}}>
                 {/* Badge */}
-                <div className={`inline-flex items-center space-x-3 px-6 py-3 rounded-full text-sm font-medium mb-8 md:mt-16 border backdrop-blur-sm ${
+                <div className={`inline-flex items-center space-x-3 px-6 py-3 rounded-full text-sm font-medium mb-8 mt-8 border backdrop-blur-sm ${
                   isDarkMode 
                     ? 'bg-white/10 text-white border-white/20' 
                     : 'bg-white/20 text-gray-100 border-white/30'
@@ -292,41 +155,37 @@ const HeroCarousel = ({ slides, isDarkMode, scrollToSection }) => {
                   }`} />
                   <span>Defesa Criminal Especializada</span>
                 </div>
-                
                 {/* Main Title */}
-                <h1 className={`text-6xl lg:text-7xl font-black mb-8 leading-tight font-heading ${
+                <h1 className={`text-4xl md:text-6xl lg:text-7xl font-black mb-6 md:mb-8 leading-tight font-heading ${
                   isDarkMode ? 'text-white' : 'text-white'
                 }`}>
                   {slide.title}
                 </h1>
-                
                 {/* Subtitle */}
-                <p className={`text-2xl lg:text-3xl mb-12 leading-relaxed font-light font-body max-w-3xl ${
+                <p className={`text-xl md:text-2xl lg:text-3xl mb-8 md:mb-12 leading-relaxed font-light font-body ${
                   isDarkMode ? 'text-gray-200' : 'text-gray-100'
                 }`}>
                   {slide.subtitle}
                 </p>
-                
                 {/* CTA Button */}
-                <div className="flex flex-row gap-6">
+                <div className="flex flex-col md:flex-row gap-4 md:gap-6">
                   <Button
                     size="lg"
-                    className={`text-xl px-12 py-8 rounded-2xl shadow-lg transition-all duration-300 font-bold transform hover:scale-105 ${
+                    className={`text-lg md:text-xl px-8 md:px-12 py-6 md:py-8 rounded-2xl shadow-lg transition-all duration-300 font-bold transform hover:scale-105 ${
                       isDarkMode 
                         ? 'bg-white text-gray-900 hover:bg-gray-100' 
                         : 'bg-white text-gray-900 hover:bg-gray-50'
                     }`}
                     onClick={() => scrollToSection('contact')}
                   >
-                    <Phone className="mr-4 h-7 w-7" />
+                    <Phone className="mr-3 md:mr-4 h-6 md:h-7 w-6 md:w-7" />
                     Consulta Gratuita
-                    <ArrowRight className="ml-3 h-6 w-6" />
+                    <ArrowRight className="ml-2 md:ml-3 h-5 md:h-6 w-5 md:w-6" />
                   </Button>
-                  
                   <Button
                     variant="outline"
                     size="lg"
-                    className={`text-xl px-12 py-8 rounded-2xl backdrop-blur-sm transition-all duration-300 font-bold ${
+                    className={`text-lg md:text-xl px-8 md:px-12 py-6 md:py-8 rounded-2xl backdrop-blur-sm transition-all duration-300 font-bold ${
                       isDarkMode 
                         ? 'border-white/30 bg-gray-600/40 text-white/90 hover:bg-gray-100/10' 
                         : 'border-white/50 bg-gray-600/40 text-white/90 hover:bg-gray-100/20'
@@ -338,10 +197,66 @@ const HeroCarousel = ({ slides, isDarkMode, scrollToSection }) => {
                 </div>
               </div>
             </div>
-          </div>
+          ) : (
+            // Centered for other slides
+            <div className="absolute inset-0 flex items-center justify-center text-center">
+              <div className="w-full max-w-xs sm:max-w-md md:max-w-2xl lg:max-w-4xl px-6 md:px-8 lg:px-12 py-12 md:py-0 mx-auto">
+                {/* Badge */}
+                <div className={`inline-flex items-center space-x-3 px-6 py-3 rounded-full text-sm font-medium mb-8 mt-8 border backdrop-blur-sm ${
+                  isDarkMode 
+                    ? 'bg-white/10 text-white border-white/20' 
+                    : 'bg-white/20 text-gray-100 border-white/30'
+                }`}>
+                  <Phone className={`h-5 w-5 ${
+                    isDarkMode ? 'text-white' : 'text-gray-100'
+                  }`} />
+                  <span>Defesa Criminal Especializada</span>
+                </div>
+                {/* Main Title */}
+                <h1 className={`text-4xl md:text-6xl lg:text-7xl font-black mb-6 md:mb-8 leading-tight font-heading ${
+                  isDarkMode ? 'text-white' : 'text-white'
+                }`}>
+                  {slide.title}
+                </h1>
+                {/* Subtitle */}
+                <p className={`text-xl md:text-2xl lg:text-3xl mb-8 md:mb-12 leading-relaxed font-light font-body ${
+                  isDarkMode ? 'text-gray-200' : 'text-gray-100'
+                }`}>
+                  {slide.subtitle}
+                </p>
+                {/* CTA Button */}
+                <div className="flex flex-col md:flex-row gap-4 md:gap-6 justify-center">
+                  <Button
+                    size="lg"
+                    className={`text-lg md:text-xl px-8 md:px-12 py-6 md:py-8 rounded-2xl shadow-lg transition-all duration-300 font-bold transform hover:scale-105 ${
+                      isDarkMode 
+                        ? 'bg-white text-gray-900 hover:bg-gray-100' 
+                        : 'bg-white text-gray-900 hover:bg-gray-50'
+                    }`}
+                    onClick={() => scrollToSection('contact')}
+                  >
+                    <Phone className="mr-3 md:mr-4 h-6 md:h-7 w-6 md:w-7" />
+                    Consulta Gratuita
+                    <ArrowRight className="ml-2 md:ml-3 h-5 md:h-6 w-5 md:w-6" />
+                  </Button>
+                  <Button
+                    variant="outline"
+                    size="lg"
+                    className={`text-lg md:text-xl px-8 md:px-12 py-6 md:py-8 rounded-2xl backdrop-blur-sm transition-all duration-300 font-bold ${
+                      isDarkMode 
+                        ? 'border-white/30 bg-gray-600/40 text-white/90 hover:bg-gray-100/10' 
+                        : 'border-white/50 bg-gray-600/40 text-white/90 hover:bg-gray-100/20'
+                    }`}
+                    onClick={() => scrollToSection('about')}
+                  >
+                    Saiba Mais
+                  </Button>
+                </div>
+              </div>
+            </div>
+          )}
         </div>
       ))}
-      
       {/* Slide Indicators */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-3">
         {slides.map((_, index) => (
