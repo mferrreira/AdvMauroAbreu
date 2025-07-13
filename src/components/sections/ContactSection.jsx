@@ -133,6 +133,56 @@ const ContactSection = ({ contactInfo, isDarkMode, handleSubmit }) => {
             </Card>
           </div>
         </div>
+
+        {/* Google Maps Section */}
+        <div className="mt-20 md:mt-32">
+          <div className="text-center mb-12 md:mb-16">
+            <h2 className={`text-3xl md:text-4xl lg:text-5xl font-black mb-6 md:mb-8 leading-tight font-heading ${
+              isDarkMode ? 'text-white' : 'text-gray-900'
+            }`}>
+              Nossa <span className={`text-transparent bg-clip-text ${
+                isDarkMode 
+                  ? 'bg-gradient-to-r from-gray-300 to-white' 
+                  : 'bg-gradient-to-r from-gray-600 to-gray-800'
+              }`}>Localização</span>
+            </h2>
+            <p className={`text-lg md:text-xl leading-relaxed font-light font-body max-w-3xl mx-auto ${
+              isDarkMode ? 'text-gray-300' : 'text-gray-600'
+            }`}>
+              Nosso escritório está localizado no centro de Itaúna, MG, 
+              oferecendo fácil acesso e atendimento personalizado para toda a região.
+            </p>
+          </div>
+          
+          <div className={`rounded-3xl overflow-hidden shadow-2xl border ${
+            isDarkMode ? 'border-gray-700' : 'border-gray-200'
+          }`}>
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3749.1234567890123!2d-44.580!3d-20.075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjDCsDA0JzMwLjAiUyA0NMKwMzQnNDguMCJX!5e0!3m2!1spt-BR!2sbr!4v1234567890123"
+              width="100%" 
+              height="450" 
+              style={{ border: 0 }} 
+              allowFullScreen="" 
+              loading="lazy" 
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Localização do escritório Dr. Mauro Abreu - Advogado Criminal em Itaúna"
+              aria-label="Mapa mostrando a localização do escritório do Dr. Mauro Abreu em Itaúna, MG"
+            />
+          </div>
+          
+          <div className="mt-8 md:mt-12 text-center">
+            <p className={`text-base md:text-lg font-body ${
+              isDarkMode ? 'text-gray-300' : 'text-gray-600'
+            }`}>
+              <strong>Endereço:</strong> Rua Antônio Corradi, 350, Cerqueira Lima, Itaúna/MG
+            </p>
+            <p className={`text-base md:text-lg font-body mt-2 ${
+              isDarkMode ? 'text-gray-300' : 'text-gray-600'
+            }`}>
+              <strong>Telefone:</strong> (37) 99908-3110
+            </p>
+          </div>
+        </div>
       </div>
     </section>
   );

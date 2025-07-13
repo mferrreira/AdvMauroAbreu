@@ -70,7 +70,7 @@ const Footer = ({ practiceAreas, footerContacts, isDarkMode }) => (
         }`}>&copy; 2025 Dr. Mauro Abreu - Advogado Criminal. Todos os direitos reservados.</p>
         <p className={`mt-2 md:mt-3 text-sm md:text-lg font-body ${
           isDarkMode ? 'text-gray-500' : 'text-gray-500'
-        }`}>OAB/MG 123.456</p>
+        }`}>OAB/MG 167.457</p>
       </div>
     </div>
   </footer>

@@ -20,6 +20,7 @@ import AboutSection from './components/sections/AboutSection.jsx';
 import ServicesSection from './components/sections/ServicesSection.jsx';
 import TestimonialsSection from './components/sections/TestimonialsSection.jsx';
 import ContactSection from './components/sections/ContactSection.jsx';
+import BlogSection from './components/sections/BlogSection.jsx';
 import Footer from './components/sections/Footer.jsx';
 
 function App() {
@@ -71,7 +72,7 @@ function App() {
     }
   
     const rawMessage = `Prezado Dr. Mauro, gostaria de entrar em contato para tratar do seguinte: ${message} Atensiosamente, ${name}.`;
-    const url = `https://api.whatsapp.com/send?phone=5531999021212&text=${encodeURIComponent(rawMessage)}`;
+    const url = `https://api.whatsapp.com/send?phone=5537999083110&text=${encodeURIComponent(rawMessage)}`;
   
     window.open(url, "_blank");
   }
@@ -115,6 +116,10 @@ function App() {
           contactInfo={contactInfo}
           isDarkMode={isDarkMode}
           handleSubmit={handleSubmit}
+        />
+
+        <BlogSection 
+          isDarkMode={isDarkMode}
         />
       </main>
 

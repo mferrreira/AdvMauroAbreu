@@ -81,7 +81,7 @@ const Header = ({ isDarkMode, isHeaderVisible, toggleTheme, scrollToSection }) =
             <Phone className={`h-4 w-4 ${
               isDarkMode ? 'text-gray-400' : 'text-gray-500'
             }`} />
-            <span className="font-medium">(31) 9 9902-1212</span>
+            <span className="font-medium">(37) 99908-3110</span>
           </div>
           <Button 
             onClick={() => scrollToSection('contact')}

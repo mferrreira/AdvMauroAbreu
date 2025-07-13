@@ -2,11 +2,11 @@
 export const carouselSlides = [
   {
     image: 'https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-    title: 'Defesa Criminal Especializada',
-    subtitle: 'Proteção dos seus direitos com estratégia, dedicação e resultados comprovados há mais de 15 anos.'
+    title: 'Advogado Criminal em Itaúna',
+    subtitle: 'Dr. Mauro Abreu - Defesa criminal especializada em Itaúna/MG. Proteção dos seus direitos com estratégia, dedicação e resultados comprovados há mais de 15 anos.'
   },
   {
-    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+    image: '/hero_photo_1.jpeg',
     title: 'Experiência e Confiança',
     subtitle: 'Mais de 500 casos defendidos com sucesso. Sua liberdade e direitos em mãos experientes.'
   },
@@ -78,17 +78,17 @@ export const contactInfo = [
   {
     icon: 'Phone',
     title: 'Telefone',
-    content: '(31) 9 9902-1212'
+    content: '(37) 99908-3110'
   },
   {
     icon: 'Mail',
     title: 'E-mail',
-    content: 'contato@mauroabreu.adv.br'
+    content: 'madvocaciaeapecializada@gmail.com'
   },
   {
     icon: 'MapPin',
     title: 'Endereço',
-    content: 'Av. Paulista, 1000 - Sala 1001\nItaúna - MG'
+    content: 'Rua Antônio Corradi, 350\nCerqueira Lima, Itaúna/MG'
   },
   {
     icon: 'Clock',
@@ -116,8 +116,8 @@ export const practiceAreas = [
 
 // Footer Contacts
 export const footerContacts = [
-  '(31) 9 9902-1212',
-  'contato@mauroabreu.adv.br',
-  'Av. Paulista, 1000 - Sala 1001',
-  'Itaúna - MG',
+  '(37) 99908-3110',
+  'madvocaciaeapecializada@gmail.com',
+  'Rua Antônio Corradi, 350',
+  'Cerqueira Lima, Itaúna/MG',
 ]; 
